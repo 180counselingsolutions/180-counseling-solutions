@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Therapy That Meets You Where You Are</title>
+  <meta name="description" content="Compassionate, personalized therapy to help you navigate life's challenges and build a life that feels more like yours.">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #34423d;
+      background: #faf9f5;
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #faf9f5;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+      color: #40594e;
+    }
+
+    nav a {
+      color: #40594e;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 110px 8%;
+      background: #e8eee7;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.15;
+      max-width: 850px;
+      margin: 0 auto 25px;
+      color: #344c40;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto 32px;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #526f5d;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 85px 8%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-family: Georgia, serif;
+      font-size: 36px;
+      color: #40594e;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    .services {
+      background: #f0f1eb;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      max-width: 1000px;
+      margin: 40px auto 0;
+    }
+
+    .card {
+      background: #faf9f5;
+      padding: 30px 22px;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      color: #40594e;
+      margin-bottom: 12px;
+      font-family: Georgia, serif;
+      font-size: 22px;
+    }
+
+    .about {
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .contact {
+      background: #e8eee7;
+    }
+
+    footer {
+      padding: 25px;
+      text-align: center;
+      font-size: 13px;
+      color: #65736b;
+    }
+
+    @media (max-width: 650px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero {
+        padding: 75px 7%;
+      }
+
+      section {
+        padding: 65px 7%;
+      }
+    }
+
+.hero {
+  text-align: left;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 55px;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.hero-copy h1 {
+  margin: 0 0 25px;
+}
+
+.hero-copy p {
+  margin: 0 0 30px;
+}
+
+.hero-photo img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(52, 76, 64, 0.12);
+}
+
+@media (max-width: 650px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-photo {
+    max-width: 420px;
+    margin: auto;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Your Practice Name</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">How I Help</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>You don't have to figure it all out alone.</h1>
+      <p>
+        A welcoming space to slow down, make sense of what you're
+        experiencing, and find a way forward that feels right for you.
+      </p>
+      <a class="button" href="#contact">Let's Connect</a>
+    </div>
+
+    <section>
+      <h2>A space to be yourself.</h2>
+      <p class="intro">
+        Life can be complicated. Sometimes we need a place where we
+        can talk openly, feel understood, and work through the things
+        that are weighing on us. Therapy offers that space.
+      </p>
+    </section>
+
+    <section class="services" id="services">
+      <h2>How I Can Help</h2>
+      <p class="intro">
+        Therapy is not one-size-fits-all. Our work will be shaped
+        around your experiences, your needs, and your goals.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Anxiety & Stress</h3>
+          <p>Find ways to navigate overwhelming thoughts, worry, and everyday stress.</p>
+        </div>
+
+        <div class="card">
+          <h3>Life Transitions</h3>
+          <p>Navigate change, uncertainty, and the challenges that come with new seasons of life.</p>
+        </div>
+
+        <div class="card">
+          <h3>Relationships</h3>
+          <p>Better understand yourself and build healthier connections with others.</p>
+        </div>
+
+        <div class="card">
+          <h3>Emotional Wellbeing</h3>
+          <p>Develop a deeper understanding of your emotions and what you need.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <h2>Meet Your Therapist</h2>
+        <p class="intro">
+          I believe meaningful change begins with feeling heard,
+          understood, and accepted. My approach to therapy is
+          collaborative, compassionate, and centered on you.
+          Together, we can explore what brought you here and
+          identify a path forward.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Taking the first step can feel big.</h2>
+      <p class="intro">
+        You don't need to have everything figured out before reaching out.
+        Let's start with a conversation.
+      </p>
+      <br>
+      <a class="button" href="mailto:your@email.com">Get in Touch</a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Your Practice Name. All rights reserved.
+  </footer>
+
+</body>
+</html>
