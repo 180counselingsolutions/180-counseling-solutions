@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>180 Counseling Solutions | A New Perspective</title>
-  <meta name="description" content="180 Counseling Solutions offers a welcoming space to pause, gain perspective, and discover a way forward.">
+  <meta name="description" content="180 Counseling Solutions offers counseling for adults and teenagers in West Des Moines, Iowa, and through telehealth. A welcoming space to pause, gain perspective, and discover a way forward.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +14,18 @@
 
   <style>
     :root {
-      --ivory: #faf9f5;
-      --cream: #f2f0e8;
-      --sage: #e7ece4;
-      --sage-dark: #526b5b;
-      --forest: #344b3e;
-      --text: #48534c;
-      --muted: #737c74;
-      --white: #ffffff;
-      --line: #e5e5dc;
+      --ivory: #faf8f2;
+      --cream: #f2eee4;
+      --sand: #e7ddce;
+      --sage: #e4e9df;
+      --sage-mid: #a9b7a0;
+      --sage-dark: #64765d;
+      --forest: #3d5041;
+      --text: #514f47;
+      --muted: #77776d;
+      --white: #fffefa;
+      --line: #e5e0d5;
+      --shadow: 0 14px 40px rgba(61, 80, 65, 0.08);
     }
 
     * {
@@ -33,33 +36,41 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 30px;
     }
 
     body {
       font-family: 'DM Sans', sans-serif;
       color: var(--text);
       background: var(--ivory);
-      line-height: 1.75;
+      line-height: 1.8;
     }
 
     a {
       color: inherit;
     }
 
+    a:focus-visible {
+      outline: 3px solid var(--sage-dark);
+      outline-offset: 4px;
+    }
+
     .container {
-      width: min(1120px, 84%);
+      width: min(1120px, 86%);
       margin: 0 auto;
     }
 
     /* HEADER */
 
     header {
-      background: var(--ivory);
+      position: relative;
+      z-index: 5;
+      background: rgba(250, 248, 242, 0.96);
       border-bottom: 1px solid var(--line);
     }
 
     .header-inner {
-      width: min(1200px, 88%);
+      width: min(1200px, 90%);
       min-height: 88px;
       margin: auto;
       display: flex;
@@ -72,17 +83,17 @@
       color: var(--forest);
       font-size: 21px;
       font-weight: 700;
-      letter-spacing: -0.6px;
+      letter-spacing: -0.7px;
       text-decoration: none;
       line-height: 1.2;
     }
 
     .logo span {
       display: block;
-      margin-top: 5px;
-      color: var(--muted);
+      margin-top: 6px;
+      color: var(--sage-dark);
       font-size: 10px;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 3px;
       text-transform: uppercase;
     }
@@ -90,13 +101,13 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 27px;
     }
 
     nav a {
       color: var(--text);
-      font-size: 14px;
-      font-weight: 500;
+      font-size: 13px;
+      font-weight: 600;
       text-decoration: none;
       transition: color 0.2s;
     }
@@ -106,113 +117,30 @@
     }
 
     nav .nav-contact {
-      padding: 10px 19px;
+      padding: 11px 20px;
       color: var(--white);
       background: var(--sage-dark);
-      border-radius: 4px;
+      border-radius: 30px;
+      transition: background 0.2s, transform 0.2s;
     }
 
     nav .nav-contact:hover {
       color: var(--white);
       background: var(--forest);
+      transform: translateY(-2px);
     }
 
-    /* HERO */
-
-    .hero {
-      padding: 85px 0;
-      background: var(--sage);
-    }
-
-    .hero-layout {
-      width: min(1120px, 84%);
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      align-items: center;
-      gap: 75px;
-    }
-
-    .eyebrow {
-      margin-bottom: 20px;
-      color: var(--sage-dark);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
+    /* SHARED TYPOGRAPHY */
 
     h1, h2, h3 {
       font-family: 'Playfair Display', Georgia, serif;
       font-weight: 500;
     }
 
-    .hero h1 {
-      max-width: 570px;
-      margin-bottom: 22px;
-      color: var(--forest);
-      font-size: clamp(42px, 5vw, 62px);
-      line-height: 1.13;
-      letter-spacing: -1px;
-    }
-
-    .hero-tagline {
-      margin-bottom: 19px;
-      color: var(--sage-dark);
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .hero-description {
-      max-width: 490px;
-      margin-bottom: 30px;
-      font-size: 16px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 14px 27px;
-      color: var(--white);
-      background: var(--sage-dark);
-      border: 1px solid var(--sage-dark);
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.2s;
-    }
-
-    .button:hover {
-      background: var(--forest);
-      border-color: var(--forest);
-      transform: translateY(-2px);
-    }
-
-    .hero-photo {
-      position: relative;
-    }
-
-    .hero-photo img {
-      display: block;
-      width: 100%;
-      max-height: 530px;
-      object-fit: cover;
-      object-position: center 35%;
-      border-radius: 8px;
-      box-shadow: 18px 18px 0 rgba(82, 107, 91, 0.13);
-    }
-
-    /* INTRO */
-
-    .intro-section {
-      padding: 100px 0;
-      text-align: center;
-    }
-
     .section-label {
-      margin-bottom: 14px;
+      margin-bottom: 15px;
       color: var(--sage-dark);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
@@ -221,29 +149,201 @@
     .section-heading {
       margin-bottom: 22px;
       color: var(--forest);
-      font-size: clamp(32px, 4vw, 43px);
+      font-size: clamp(32px, 4vw, 45px);
       line-height: 1.25;
     }
 
-    .intro-text {
-      max-width: 720px;
+    /* BUTTONS */
+
+    .button {
+      display: inline-block;
+      padding: 14px 29px;
+      color: var(--white);
+      background: var(--sage-dark);
+      border: 1px solid var(--sage-dark);
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .button:hover {
+      background: var(--forest);
+      border-color: var(--forest);
+      transform: translateY(-2px);
+      box-shadow: 0 7px 18px rgba(61, 80, 65, 0.15);
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 110px;
+      background:
+        radial-gradient(ellipse at 5% 10%, rgba(255,255,255,0.65), transparent 38%),
+        linear-gradient(125deg, #e9ede4 0%, #e2e9df 55%, #eee9dd 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      top: -200px;
+      left: -120px;
+      border: 1px solid rgba(100, 118, 93, 0.13);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      bottom: -190px;
+      right: 35%;
+      border: 1px solid rgba(100, 118, 93, 0.13);
+      border-radius: 50%;
+    }
+
+    .hero-layout {
+      position: relative;
+      z-index: 1;
+      width: min(1120px, 86%);
       margin: auto;
-      color: var(--text);
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      color: var(--sage-dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 27px;
+      height: 1px;
+      background: var(--sage-dark);
+    }
+
+    .hero h1 {
+      max-width: 590px;
+      margin-bottom: 24px;
+      color: var(--forest);
+      font-size: clamp(43px, 5.3vw, 66px);
+      line-height: 1.12;
+      letter-spacing: -1.4px;
+    }
+
+    .hero-tagline {
+      margin-bottom: 18px;
+      color: var(--sage-dark);
       font-size: 17px;
+      font-weight: 700;
+    }
+
+    .hero-description {
+      max-width: 480px;
+      margin-bottom: 32px;
+      color: #5e6259;
+      font-size: 16px;
+    }
+
+    .hero-welcome {
+      margin-top: 22px;
+      color: #74776c;
+      font-size: 13px;
+      font-style: italic;
+    }
+
+    .hero-photo {
+      position: relative;
+      max-width: 475px;
+      margin-left: auto;
+      padding: 0 15px 15px 0;
+    }
+
+    .hero-photo::before {
+      content: "";
+      position: absolute;
+      top: 17px;
+      right: 0;
+      bottom: 0;
+      left: 17px;
+      border: 1px solid rgba(100, 118, 93, 0.45);
+      border-radius: 48% 48% 12px 12px;
+    }
+
+    .hero-photo img {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-height: 550px;
+      object-fit: cover;
+      object-position: center 35%;
+      border-radius: 48% 48% 12px 12px;
+      box-shadow: var(--shadow);
+    }
+
+    /* INTRODUCTION */
+
+    .intro-section {
+      position: relative;
+      padding: 105px 0 110px;
+      text-align: center;
+    }
+
+    .intro-section::after {
+      content: "✳";
+      display: block;
+      margin: 35px auto 0;
+      color: var(--sage-mid);
+      font-size: 23px;
+    }
+
+    .intro-text {
+      max-width: 740px;
+      margin: auto;
+      color: #65645c;
+      font-size: 17px;
+      line-height: 1.9;
     }
 
     /* SERVICES */
 
     .services {
-      padding: 95px 0 105px;
+      padding: 100px 0 110px;
       background: var(--cream);
       text-align: center;
     }
 
     .services-intro {
-      max-width: 680px;
+      max-width: 700px;
       margin: 0 auto;
+      color: #66665d;
       font-size: 16px;
+    }
+
+    .services-note {
+      max-width: 680px;
+      margin: 18px auto 0;
+      padding: 13px 20px;
+      color: var(--sage-dark);
+      background: rgba(255, 254, 250, 0.7);
+      border-radius: 10px;
+      font-size: 13px;
     }
 
     .cards {
@@ -255,85 +355,131 @@
     }
 
     .card {
-      min-height: 225px;
-      padding: 30px 24px;
-      background: var(--ivory);
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      transition: transform 0.2s, box-shadow 0.2s;
+      min-height: 240px;
+      padding: 30px 25px;
+      background: var(--white);
+      border: 1px solid rgba(100, 118, 93, 0.13);
+      border-radius: 13px;
+      box-shadow: 0 5px 18px rgba(61, 80, 65, 0.035);
+      transition: transform 0.25s, box-shadow 0.25s;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(52, 75, 62, 0.07);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
     }
 
     .card-number {
-      display: block;
-      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 21px;
       color: var(--sage-dark);
-      font-size: 12px;
+      background: var(--sage);
+      border-radius: 50%;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
     }
 
     .card h3 {
-      margin-bottom: 12px;
+      margin-bottom: 13px;
       color: var(--forest);
-      font-size: 22px;
+      font-size: 21px;
+      line-height: 1.3;
     }
 
     .card p {
       color: var(--muted);
       font-size: 14px;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     /* ABOUT */
 
     .about {
-      padding: 100px 0;
+      padding: 110px 0;
+      background: var(--ivory);
     }
 
     .about-layout {
       display: grid;
       grid-template-columns: 0.8fr 1.2fr;
       align-items: center;
-      gap: 75px;
+      gap: 85px;
     }
 
     .about-decoration {
-      min-height: 350px;
+      position: relative;
+      min-height: 390px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 40px;
+      padding: 45px;
+      overflow: hidden;
       background: var(--sage);
-      border-radius: 6px;
+      border-radius: 48% 48% 14px 14px;
       text-align: center;
     }
 
+    .about-decoration::before,
+    .about-decoration::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(100, 118, 93, 0.22);
+      border-radius: 50%;
+    }
+
+    .about-decoration::before {
+      width: 250px;
+      height: 250px;
+      top: -135px;
+      left: -110px;
+    }
+
+    .about-decoration::after {
+      width: 230px;
+      height: 230px;
+      right: -115px;
+      bottom: -125px;
+    }
+
     .about-decoration p {
-      max-width: 270px;
+      position: relative;
+      z-index: 1;
+      max-width: 280px;
       color: var(--forest);
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 30px;
-      line-height: 1.4;
+      font-size: 31px;
+      line-height: 1.45;
     }
 
     .about-copy .section-heading {
-      margin-bottom: 20px;
+      margin-bottom: 8px;
     }
 
-    .about-copy p {
+    .credentials {
+      margin-bottom: 24px;
+      color: var(--sage-dark);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .about-copy p:not(.section-label):not(.credentials) {
       margin-bottom: 17px;
-      font-size: 16px;
+      color: #626259;
+      font-size: 15px;
     }
 
     /* THERAPY PROCESS */
 
     .process {
-      padding: 95px 0;
+      position: relative;
+      padding: 100px 0 110px;
+      overflow: hidden;
       background: var(--sage);
       text-align: center;
     }
@@ -342,52 +488,156 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 45px;
-      margin-top: 50px;
+      margin-top: 55px;
       text-align: left;
     }
 
     .process-item {
-      padding-top: 22px;
-      border-top: 1px solid rgba(52, 75, 62, 0.25);
+      padding: 25px 24px 0 0;
+      border-top: 1px solid rgba(61, 80, 65, 0.3);
+    }
+
+    .process-number {
+      display: block;
+      margin-bottom: 13px;
+      color: var(--sage-dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
     }
 
     .process-item h3 {
-      margin-bottom: 12px;
+      margin-bottom: 13px;
       color: var(--forest);
-      font-size: 23px;
+      font-size: 24px;
     }
 
     .process-item p {
-      color: var(--text);
+      color: #5e645a;
       font-size: 15px;
+    }
+
+    /* FEES & INSURANCE */
+
+    .fees {
+      padding: 100px 0 110px;
+      background: var(--ivory);
+      text-align: center;
+    }
+
+    .fees-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 850px;
+      margin: 45px auto 0;
+      text-align: left;
+    }
+
+    .fee-card {
+      padding: 36px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(61, 80, 65, 0.04);
+    }
+
+    .fee-label {
+      margin-bottom: 17px;
+      color: var(--sage-dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .fee-card h3 {
+      margin-bottom: 15px;
+      color: var(--forest);
+      font-size: 28px;
+    }
+
+    .fee-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .insurance-note {
+      max-width: 750px;
+      margin: 30px auto 0;
+      color: var(--muted);
+      font-size: 13px;
     }
 
     /* CONTACT */
 
     .contact {
-      padding: 100px 20px;
-      background: var(--forest);
+      position: relative;
+      padding: 105px 20px 100px;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 90% 10%, rgba(255,255,255,0.07), transparent 35%),
+        var(--forest);
       color: var(--white);
       text-align: center;
     }
 
+    .contact::before {
+      content: "";
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      top: -235px;
+      left: -100px;
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 50%;
+    }
+
     .contact .section-label {
-      color: #c7d5c9;
+      color: #c8d4c2;
     }
 
     .contact h2 {
-      max-width: 650px;
-      margin: 0 auto 20px;
+      position: relative;
+      max-width: 680px;
+      margin: 0 auto 22px;
       color: var(--white);
-      font-size: clamp(34px, 4vw, 46px);
+      font-size: clamp(35px, 4.5vw, 49px);
       line-height: 1.25;
     }
 
-    .contact p {
-      max-width: 600px;
-      margin: 0 auto 30px;
-      color: #e0e7e0;
+    .contact-intro {
+      max-width: 610px;
+      margin: 0 auto 35px;
+      color: #e1e7dc;
       font-size: 16px;
+    }
+
+    .contact-details {
+      margin: 0 auto 32px;
+      line-height: 2;
+    }
+
+    .contact-details p {
+      margin-bottom: 7px;
+      color: #e5e9e0;
+      font-size: 14px;
+    }
+
+    .contact-details .contact-method {
+      margin-top: 15px;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .contact-details a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .contact-details a:hover {
+      color: #d2ddcb;
     }
 
     .contact .button {
@@ -405,34 +655,44 @@
 
     footer {
       padding: 30px 8%;
-      background: #293d32;
-      color: #d8dfd8;
+      background: #303f34;
+      color: #e0e5dc;
       text-align: center;
-      font-size: 13px;
+      font-size: 12px;
     }
 
     footer p + p {
       margin-top: 5px;
-      color: #aebcaf;
+      color: #b9c5b5;
     }
 
-    /* MOBILE */
+    /* TABLET */
 
-    @media (max-width: 900px) {
+    @media (max-width: 1000px) {
+      nav {
+        gap: 15px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .hero-layout {
+        gap: 45px;
+      }
+
       .cards {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .hero-layout {
-        gap: 40px;
-      }
-
       .about-layout {
-        gap: 40px;
+        gap: 50px;
       }
     }
 
-    @media (max-width: 650px) {
+    /* MOBILE */
+
+    @media (max-width: 700px) {
       .container,
       .hero-layout {
         width: 88%;
@@ -448,72 +708,132 @@
       nav {
         justify-content: center;
         flex-wrap: wrap;
-        gap: 16px;
+        gap: 12px 17px;
       }
 
       nav a {
-        font-size: 13px;
+        font-size: 12px;
       }
 
       nav .nav-contact {
-        padding: 8px 13px;
+        padding: 8px 14px;
       }
 
       .hero {
-        padding: 60px 0;
+        padding: 65px 0 75px;
       }
 
       .hero-layout {
         grid-template-columns: 1fr;
-        gap: 38px;
+        gap: 45px;
       }
 
       .hero h1 {
-        font-size: 43px;
+        font-size: clamp(42px, 10vw, 54px);
       }
 
       .hero-photo {
-        max-width: 450px;
-        margin: auto;
+        width: 90%;
+        max-width: 430px;
+        margin: 0 auto;
       }
 
       .intro-section,
       .about {
-        padding: 75px 0;
+        padding: 80px 0;
       }
 
       .services,
-      .process {
-        padding: 75px 0;
+      .process,
+      .fees {
+        padding: 80px 0;
       }
 
       .cards {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 16px;
         margin-top: 35px;
       }
 
       .card {
         min-height: auto;
+        padding: 27px;
       }
 
       .about-layout {
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 40px;
       }
 
       .about-decoration {
-        min-height: 230px;
+        min-height: 270px;
+        max-width: 420px;
+        margin: auto;
+      }
+
+      .about-decoration p {
+        font-size: 28px;
       }
 
       .process-grid {
         grid-template-columns: 1fr;
         gap: 30px;
+        margin-top: 40px;
+      }
+
+      .process-item {
+        padding-top: 20px;
+      }
+
+      .fees-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
         margin-top: 35px;
       }
 
+      .fee-card {
+        padding: 30px;
+      }
+
       .contact {
-        padding: 75px 22px;
+        padding: 80px 22px;
+      }
+    }
+
+    /* SMALL PHONES */
+
+    @media (max-width: 380px) {
+      .logo {
+        font-size: 19px;
+      }
+
+      nav {
+        gap: 11px;
+      }
+
+      nav a {
+        font-size: 11px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .section-heading {
+        font-size: 32px;
+      }
+    }
+
+    /* REDUCED MOTION ACCESSIBILITY */
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
       }
     }
   </style>
@@ -528,7 +848,7 @@
         <span>A New Perspective</span>
       </a>
 
-      <nav>
+      <nav aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#services">How I Help</a>
         <a href="#therapy">What to Expect</a>
@@ -539,6 +859,8 @@
   </header>
 
   <main>
+
+    <!-- HERO -->
 
     <section class="hero" id="home">
       <div class="hero-layout">
@@ -559,15 +881,21 @@
           </p>
 
           <a class="button" href="#contact">Let's Connect</a>
+
+          <p class="hero-welcome">
+            A welcoming space to be heard, understood, and yourself.
+          </p>
         </div>
 
         <div class="hero-photo">
           <img src="therapist-photo.jpg"
-               alt="Therapist at 180 Counseling Solutions">
+               alt="Michael Davis, therapist at 180 Counseling Solutions">
         </div>
 
       </div>
     </section>
+
+    <!-- INTRODUCTION -->
 
     <section class="intro-section">
       <div class="container">
@@ -584,6 +912,8 @@
       </div>
     </section>
 
+    <!-- SERVICES -->
+
     <section class="services" id="services">
       <div class="container">
         <p class="section-label">How I Help</p>
@@ -594,54 +924,56 @@
           Therapy is not one-size-fits-all. Our work will be shaped
           around your experiences, your needs, and your goals.
         </p>
-<p class="services-intro" style="margin-top: 14px; font-size: 14px;">
-  Counseling and support are provided for individuals with Autism
-  and ADHD. Formal diagnostic evaluations are not offered.
-</p>
-<div class="cards">
 
-  <div class="card">
-    <span class="card-number">01</span>
-    <h3>Autism & Neurodiversity</h3>
-    <p>
-      Affirming support focused on self-understanding, recognizing
-      individual strengths, navigating challenges, and finding
-      strategies that work for you.
-    </p>
-  </div>
+        <p class="services-note">
+          Counseling and support are provided for individuals with
+          autism and ADHD. Formal diagnostic evaluations are not offered.
+        </p>
 
-  <div class="card">
-    <span class="card-number">02</span>
-    <h3>ADHD Support</h3>
-    <p>
-      Explore practical approaches to focus, organization,
-      emotional regulation, and the everyday demands of life.
-    </p>
-  </div>
+        <div class="cards">
 
-  <div class="card">
-    <span class="card-number">03</span>
-    <h3>Anxiety & Emotional Wellness</h3>
-    <p>
-      Better understand anxiety, manage overwhelming thoughts,
-      and develop coping strategies that support your wellbeing.
-    </p>
-  </div>
+          <div class="card">
+            <span class="card-number">01</span>
+            <h3>Autism & Neurodiversity</h3>
+            <p>
+              Affirming support focused on self-understanding, recognizing
+              individual strengths, navigating challenges, and finding
+              strategies that work for you.
+            </p>
+          </div>
 
-  <div class="card">
-    <span class="card-number">04</span>
-    <h3>Anger Management</h3>
-    <p>
-      Understand triggers, recognize emotional patterns,
-      and develop healthier ways to respond and communicate.
-    </p>
-  </div>
+          <div class="card">
+            <span class="card-number">02</span>
+            <h3>ADHD Support</h3>
+            <p>
+              Explore practical approaches to focus, organization,
+              emotional regulation, and the everyday demands of life.
+            </p>
+          </div>
 
-</div>
+          <div class="card">
+            <span class="card-number">03</span>
+            <h3>Anxiety & Emotional Wellness</h3>
+            <p>
+              Better understand anxiety, manage overwhelming thoughts,
+              and develop coping strategies that support your wellbeing.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="card-number">04</span>
+            <h3>Anger Management</h3>
+            <p>
+              Understand triggers, recognize emotional patterns,
+              and develop healthier ways to respond and communicate.
+            </p>
+          </div>
 
         </div>
       </div>
     </section>
+
+    <!-- ABOUT -->
 
     <section class="about" id="about">
       <div class="container about-layout">
@@ -652,45 +984,47 @@
           </p>
         </div>
 
-<div class="about-copy">
-  <p class="section-label">A Little About Me</p>
+        <div class="about-copy">
+          <p class="section-label">A Little About Me</p>
 
-  <h2 class="section-heading">Michael Davis, LMHC</h2>
+          <h2 class="section-heading">Michael Davis, LMHC</h2>
 
-<p style="font-weight: 600; color: #526b5b; margin-bottom: 20px;">
-  Licensed Mental Health Counselor
-</p>
+          <p class="credentials">
+            Licensed Mental Health Counselor
+          </p>
 
-  <p>
-    I believe meaningful change begins with feeling heard,
-    understood, and accepted. Reaching out for support can
-    take courage, and you deserve a space where you can show
-    up as yourself.
-  </p>
+          <p>
+            I believe meaningful change begins with feeling heard,
+            understood, and accepted. Reaching out for support can
+            take courage, and you deserve a space where you can show
+            up as yourself.
+          </p>
 
-  <p>
-    My approach to counseling blends practical, skills-based
-    strategies with conversation, exploration, and self-discovery.
-    Every person is different, and I believe therapy should reflect
-    the individual rather than follow a one-size-fits-all approach.
-  </p>
+          <p>
+            My approach to counseling blends practical, skills-based
+            strategies with conversation, exploration, and self-discovery.
+            Every person is different, and I believe therapy should reflect
+            the individual rather than follow a one-size-fits-all approach.
+          </p>
 
-  <p>
-    I work with adults and teenagers, with a particular focus
-    on supporting individuals with autism and ADHD, as well as
-    those navigating anxiety, emotional regulation, and anger
-    management.
-  </p>
+          <p>
+            I work with adults and teenagers, with a particular focus
+            on supporting individuals with autism and ADHD, as well as
+            those navigating anxiety, emotional regulation, and anger
+            management.
+          </p>
 
-  <p>
-    Whether you're looking for practical tools to manage everyday
-    challenges or a space to better understand yourself, our work
-    will be guided by your needs, strengths, and goals.
-  </p>
-</div>
+          <p>
+            Whether you're looking for practical tools to manage everyday
+            challenges or a space to better understand yourself, our work
+            will be guided by your needs, strengths, and goals.
+          </p>
+        </div>
 
       </div>
     </section>
+
+    <!-- THERAPY PROCESS -->
 
     <section class="process" id="therapy">
       <div class="container">
@@ -706,6 +1040,7 @@
         <div class="process-grid">
 
           <div class="process-item">
+            <span class="process-number">01 / BEGIN</span>
             <h3>Start with a Conversation</h3>
             <p>
               We'll begin by getting to know one another and talking
@@ -714,6 +1049,7 @@
           </div>
 
           <div class="process-item">
+            <span class="process-number">02 / EXPLORE</span>
             <h3>Explore Your Perspective</h3>
             <p>
               We'll work together to better understand your experiences,
@@ -722,6 +1058,7 @@
           </div>
 
           <div class="process-item">
+            <span class="process-number">03 / MOVE FORWARD</span>
             <h3>Find a Way Forward</h3>
             <p>
               We'll identify meaningful steps toward the changes
@@ -732,89 +1069,101 @@
         </div>
       </div>
     </section>
-    
-<section class="services" id="fees">
-  <div class="container">
-    <p class="section-label">Fees & Insurance</p>
 
-    <h2 class="section-heading">Making counseling accessible.</h2>
+    <!-- FEES & INSURANCE -->
 
-    <div class="cards">
+    <section class="fees" id="fees">
+      <div class="container">
+        <p class="section-label">Fees & Insurance</p>
 
-      <div class="card">
-        <span class="card-number">PRIVATE PAY</span>
-        <h3>$135 per session</h3>
+        <h2 class="section-heading">Making counseling accessible.</h2>
+
+        <p class="services-intro">
+          Clear information about session fees and accepted insurance plans.
+        </p>
+
+        <div class="fees-grid">
+
+          <div class="fee-card">
+            <p class="fee-label">PRIVATE PAY</p>
+            <h3>$135 per session</h3>
+            <p>
+              Private-pay counseling is available at a rate of
+              $135 per session.
+            </p>
+          </div>
+
+          <div class="fee-card">
+            <p class="fee-label">INSURANCE</p>
+            <h3>Insurance Plans</h3>
+            <p>
+              Wellmark<br>
+              Blue Cross Blue Shield<br>
+              UnitedHealthcare<br>
+              Aetna<br>
+              UMR
+            </p>
+          </div>
+
+        </div>
+
+        <p class="insurance-note">
+          Insurance coverage and out-of-pocket costs vary by plan.
+          Please contact your insurance provider to verify your
+          benefits before your first appointment.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+      <p class="section-label">Take the First Step</p>
+
+      <h2>You don't have to have it all figured out.</h2>
+
+      <p class="contact-intro">
+        Reaching out can feel like a big step. You don't need to
+        know exactly what to say or where to begin. Let's start
+        with a conversation.
+      </p>
+
+      <div class="contact-details">
+        <p class="contact-method">
+          In-person & Telehealth Counseling
+        </p>
+
         <p>
-          Private-pay counseling is available at a rate of
-          $135 per session.
+          <a href="https://www.google.com/maps/search/?api=1&query=950+Office+Park+Road+Suite+221+West+Des+Moines+IA+50265"
+             target="_blank"
+             rel="noopener noreferrer">
+            950 Office Park Road, Suite 221<br>
+            West Des Moines, IA 50265
+          </a>
+        </p>
+
+        <p>
+          <a href="mailto:180counselingsolutions@gmail.com">
+            180counselingsolutions@gmail.com
+          </a>
+        </p>
+
+        <p>
+          <a href="tel:+15157050706">
+            (515) 705-0706
+          </a>
         </p>
       </div>
 
-      <div class="card">
-        <span class="card-number">INSURANCE</span>
-        <h3>Insurance Plans</h3>
-        <p>
-          Wellmark<br>
-          Blue Cross Blue Shield<br>
-          UnitedHealthcare<br>
-          Aetna<br>
-          UMR
-        </p>
-      </div>
-
-    </div>
-
-    <p class="services-intro" style="margin-top: 30px; font-size: 14px;">
-      Insurance coverage and out-of-pocket costs vary by plan.
-      Please contact your insurance provider to verify your
-      benefits before your first appointment.
-    </p>
-  </div>
-</section>
-    
-<section class="contact" id="contact">
-  <p class="section-label">Take the First Step</p>
-
-  <h2>You don't have to have it all figured out.</h2>
-
-  <p>
-    Reaching out can feel like a big step. You don't need to
-    know exactly what to say or where to begin. Let's start
-    with a conversation.
-  </p>
-
-  <div style="margin: 30px auto; line-height: 2;">
-    <p><strong>In-person & Telehealth Counseling</strong></p>
-    <p>
-  <a href="https://www.google.com/maps/search/?api=1&query=950+Office+Park+Road+Suite+221+West+Des+Moines+IA+50265"
-     target="_blank"
-     rel="noopener noreferrer"
-     style="color: #ffffff; text-decoration: underline;">
-    950 Office Park Road, Suite 221<br>
-    West Des Moines, IA 50265
-  </a>
-</p>
-    <p>West Des Moines, IA 50265</p>
-    <p>
-      <a href="mailto:180counselingsolutions@gmail.com"
-         style="color: #ffffff;">
-        180counselingsolutions@gmail.com
+      <a class="button"
+         href="mailto:180counselingsolutions@gmail.com">
+        Get in Touch
       </a>
-    </p>
-    <p>
-  <a href="tel:+15157050706" style="color: #ffffff;">
-    (515) 705-0706
-  </a>
-</p>
-  </div>
-
-  <a class="button"
-     href="mailto:180counselingsolutions@gmail.com">
-    Get in Touch
-  </a>
-</section>
+    </section>
 
   </main>
+
+  <!-- FOOTER -->
 
   <footer>
     <p>© 2026 180 Counseling Solutions. All rights reserved.</p>
@@ -823,3 +1172,4 @@
 
 </body>
 </html>
+```
