@@ -259,31 +259,33 @@
 
     .hero-photo {
       position: relative;
-      max-width: 475px;
+      width: 100%;
+      max-width: 390px;
+      aspect-ratio: 4 / 5;
       margin-left: auto;
-      padding: 0 15px 15px 0;
+      padding: 0;
+      overflow: hidden;
+      border-radius: 48% 48% 12px 12px;
+      box-shadow: var(--shadow);
     }
 
     .hero-photo::before {
       content: "";
       position: absolute;
-      top: 17px;
-      right: 0;
-      bottom: 0;
-      left: 17px;
+      inset: 0;
+      z-index: 1;
       border: 1px solid rgba(100, 118, 93, 0.45);
-      border-radius: 48% 48% 12px 12px;
+      border-radius: inherit;
+      pointer-events: none;
     }
 
     .hero-photo img {
-      position: relative;
       display: block;
       width: 100%;
-      height: 550px;
+      height: 100%;
       object-fit: cover;
       object-position: center 25%;
-      border-radius: 48% 48% 12px 12px;
-      box-shadow: var(--shadow);
+      border-radius: inherit;
     }
 
     /* INTRODUCTION */
@@ -327,7 +329,7 @@
 
     .services-note {
       max-width: 680px;
-      margin: 18px auto 0;
+      margin: 36px auto 0;
       padding: 13px 20px;
       color: var(--sage-dark);
       background: rgba(255, 254, 250, 0.7);
@@ -722,13 +724,9 @@
       }
 
       .hero-photo {
-        width: 90%;
-        max-width: 430px;
+        width: 85%;
+        max-width: 350px;
         margin: 0 auto;
-      }
-
-      .hero-photo img {
-        height: 500px;
       }
 
       .intro-section,
