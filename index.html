@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -642,6 +642,59 @@
       border-color: var(--cream);
     }
 
+    /* ONLINE PROFILES */
+
+    .online-profiles {
+      padding: 55px 20px 60px;
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .online-profiles h2 {
+      margin-bottom: 12px;
+      color: var(--forest);
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    .online-profiles p {
+      margin-bottom: 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .profile-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .profile-links a {
+      display: inline-block;
+      padding: 11px 22px;
+      color: var(--forest);
+      background: var(--white);
+      border: 1px solid var(--sage-mid);
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+
+    .profile-links a:hover {
+      color: var(--white);
+      background: var(--sage-dark);
+      transform: translateY(-2px);
+    }
+
+    .profile-links a:focus-visible {
+      outline: 3px solid var(--sage-dark);
+      outline-offset: 4px;
+    }
+
     /* FOOTER */
 
     footer {
@@ -1154,6 +1207,30 @@
 
   </main>
 
+  <!-- ONLINE PROFILES -->
+
+  <section class="online-profiles" aria-labelledby="online-profiles-heading">
+    <h2 id="online-profiles-heading">Connect Online</h2>
+    <p>Find 180 Counseling Solutions on Facebook, Instagram, and Psychology Today.</p>
+
+    <div class="profile-links">
+      <a href="https://www.facebook.com/share/1GERdsEjFN/"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Visit 180 Counseling Solutions on Facebook">Facebook</a>
+
+      <a href="https://www.instagram.com/180counselingsolutions?obrf=NHh0MW0yOTd1ZXp4"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Visit 180 Counseling Solutions on Instagram">Instagram</a>
+
+      <a href="https://www.psychologytoday.com/us/therapists/michael-davis-west-des-moines-ia/238803"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="View Michael Davis on Psychology Today">Psychology Today</a>
+    </div>
+  </section>
+
   <!-- FOOTER -->
 
   <footer>
@@ -1163,3 +1240,4 @@
 
 </body>
 </html>
+```
