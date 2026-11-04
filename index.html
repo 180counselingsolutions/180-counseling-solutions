@@ -80,23 +80,16 @@
     }
 
     .logo {
-      color: var(--forest);
-      font-size: 21px;
-      font-weight: 700;
-      letter-spacing: -0.7px;
-      text-decoration: none;
-      line-height: 1.2;
-    }
+  display: block;
+  flex-shrink: 0;
+}
 
-    .logo span {
-      display: block;
-      margin-top: 6px;
-      color: var(--sage-dark);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
+.logo img {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+}
 
     nav {
       display: flex;
@@ -888,9 +881,8 @@
   <header>
     <div class="header-inner">
       <a class="logo" href="#home">
-        180 Counseling Solutions
-        <span>A New Perspective</span>
-      </a>
+  <img src="180-logo.png" alt="180 Counseling Solutions">
+</a>
 
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
